@@ -6,7 +6,6 @@
       apt: name={{ item }} state=present
       with_items:
         - expect
-        - chromium-browser
     - name: Install Oracle Java
       command: ./install-oracle-java.sh
     - name: Install Maven
