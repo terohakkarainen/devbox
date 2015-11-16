@@ -1,0 +1,9 @@
+#!/usr/bin/expect
+
+set timeout 300
+
+spawn sudo umake ide eclipse
+expect "Choose"
+send "\r"
+wait
+

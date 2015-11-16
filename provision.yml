@@ -1,0 +1,13 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: Install new dependencies
+      apt: name={{ item }} state=present
+      with_items:
+        - ansible
+    - name: Remove obsolete dependencies
+      apt: name={{ item }} state=absent
+      with_items:
+        - cowsay
+

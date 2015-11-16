@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+
+set timeout 300
+
+spawn apt-get install -y oracle-java8-installer
+expect "You MUST agree to the license"
+send "\r"
+
+expect "Do you accept"
+send "\t"
+sleep 1
+send "\r"
+wait
+
